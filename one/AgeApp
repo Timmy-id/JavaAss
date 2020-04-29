@@ -1,0 +1,35 @@
+package ages;
+import java.util.ArrayList;
+import java.util.Collections;
+import javax.swing.JOptionPane;
+
+public class Ages {
+
+    public static void main(String[] args) {
+    
+        ArrayList<Integer> numAges = getAges();
+        displayAges(numAges);
+    }
+    
+    public static ArrayList<Integer> getAges() {
+        
+            int n = Integer.parseInt(JOptionPane.showInputDialog("Enter the number of ages to input"));
+            ArrayList<Integer> numAges = new ArrayList<>(n);
+            for (int i = 0; i < n; i++) {
+                numAges.add(Integer.parseInt(JOptionPane.showInputDialog("Enter age:")));
+            }
+            int largest = Collections.max(numAges);
+            JOptionPane.showMessageDialog(null, "Maximum age: " + largest);
+            
+            return numAges;
+        
+    }
+    public static void displayAges(ArrayList<Integer> n) {
+        n.forEach((mAge) -> {
+            System.out.println(mAge);
+        });
+            
+    }
+    
+}
+
