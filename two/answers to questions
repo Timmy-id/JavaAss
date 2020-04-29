@@ -1,0 +1,4 @@
+a. The add method adds a new name to the ArrayList names and it belongs to the class Names.
+b. The break statement terminates the while loop when the no option is selected. The while loop was preferred in line 10 because the code
+ is to be executed repeatedly based on the given boolean condition. The for loop was preferred on line 20 because we want to iterate the
+  array multiple times.
