@@ -1,0 +1,26 @@
+package sumstring;
+import java.util.Scanner;
+
+public class SumString {
+    public int sumOfNum(String myNumStr){
+        int numStr = myNumStr.length();
+        int sum = 0;
+        for(int i = 0; i < numStr; i++) {
+            if(Character.isDigit(myNumStr.charAt(i))) {
+                String sumNum = myNumStr.substring(i, i + 1);
+                sum += Integer.parseInt(sumNum);
+            }
+        }
+        return sum;
+    }
+    
+public static void main(String[] args) {
+        Scanner myNumStr = new Scanner(System.in);
+        System.out.println("Enter number: ");
+    
+        String num = myNumStr.nextLine();
+         SumString val = new SumString();
+         String myVal = num;
+         System.out.println("The total is " + val.sumOfNum(myVal));
+    }
+}
