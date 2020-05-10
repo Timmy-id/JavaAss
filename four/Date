@@ -1,0 +1,44 @@
+package personapp;
+
+
+import java.util.GregorianCalendar;
+
+class MyDate {
+    private int year;
+    private int month;
+    private int day;
+    
+    private long milliseconds;
+    GregorianCalendar MyDate = new GregorianCalendar();
+    
+    MyDate() {
+        this.month = 0;
+        milliseconds = System.currentTimeMillis();
+    }
+    
+    MyDate(long milliseconds) {
+        this.month = 0;
+        this.milliseconds = milliseconds;
+    }
+    
+    MyDate(int year, int month, int day) {
+        this.month = 0;
+        MyDate.set(year, month, day);
+    }
+    
+    public int getYear() {
+        return year = MyDate.get(GregorianCalendar.YEAR);
+    } 
+    
+    public int getMonth() {
+        return month = MyDate.get(GregorianCalendar.MONTH);
+    }
+    
+    public int getDay() {
+        return day = MyDate.get(GregorianCalendar.DAY_OF_MONTH);
+    }
+    
+    public void setDate(long elapsedTime) {
+        MyDate.setTimeInMillis(elapsedTime);
+    }
+}
