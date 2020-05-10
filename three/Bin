@@ -1,0 +1,41 @@
+package binapp;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class BinApp {
+
+    public static void main(String[] args) {1
+        
+        Scanner input;
+        input = new Scanner(System.in);
+        System.out.print("Enter the number of objects: ");
+        int numOfObjects = input.nextInt();
+        ArrayList<Integer> objects;
+        objects = new ArrayList<>();
+        System.out.print("Enter the weights of the objects: ");
+        
+        for (int i = 0; i < numOfObjects; i++) {
+            objects.add(input.nextInt());
+        }
+        
+        int container = 1;
+        while(!objects.isEmpty()) {
+        System.out.println("Container " + container++ + " contains objects with weight " + 
+                getContainer(objects, 10));
+        } 
+    }
+ 
+    static String getContainer(ArrayList<Integer> objects, int max) {
+        String answer = "";
+        for (int i = 0; i < objects.size(); i++) {
+            if(objects.get(i) <= max) {
+                int obj = objects.get(i);
+                answer += obj + " ";
+                objects.remove(i);
+                return answer + getContainer(objects, max - obj);
+            }
+        }
+        return answer;
+    }
+}
