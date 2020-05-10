@@ -1,0 +1,28 @@
+package personapp;
+
+public class PersonApp {
+
+    public static void main(String[] args) {
+		
+		Person person = new Person("Mike", "1 Olam street", 
+			"7033143212", "mike@gmail.com");
+
+		Student student = new Student("Timmy", "21 Peace close", "8132213430", 
+			"timmy01@gmail.com", Student.JUNIOR);
+
+		Employee employee = new Employee("Paul", "10 Wall Street", "0121015788",
+			"paul@gmail.com", "15", 10000);
+
+		Faculty faculty = new Faculty("Walker", "2 Brighton Ave", "9012576520",
+			"walker21@gmail.com", "33", 80000, "8am to 4pm", "Assistant Lecturer");
+
+		Staff staff = new Staff("James", "19 Airport road", "8031890140",
+			"james_kn@gmail.com", "1", 40000, "Librarian");
+
+		System.out.println(person.toString());
+		System.out.println(student.toString());
+		System.out.println(employee.toString());
+		System.out.println(faculty.toString());
+		System.out.println(staff.toString());
+	}    
+}
